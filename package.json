@@ -1,0 +1,16 @@
+{
+  "name": "icey",
+  "version": "1.0.0",
+  "description": "A simulation game",
+  "main": "index.js",
+  "author": "ryanhinkel@gmail.com, kliph@users.noreply.github.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2",
+    "perlin-simplex": "^0.0.3"
+  }
+}
