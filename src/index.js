@@ -2,7 +2,6 @@ import Simplex from 'perlin-simplex'
 
 import { renderBoard, splitCoord, boardCoordinates } from './board'
 
-import './hex.scss'
 import './board.scss'
 
 
