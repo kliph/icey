@@ -1,24 +1,29 @@
 #board {
+  --col-count: 10;
+  --row-count: 10;
+  --width: 150px;
+  width: calc((var(--col-count) + 2) * var(--width));
+  // width: 1784px;
   // width: 17840px;
-  width: 8150px;
+  // width: 8150px;
 }
 
 .hex {
-  width:150px;
-  height:86px;
+  width:var(--width);
+  height:calc(var(--width) * 0.57);
   background-color: #ccc;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: auto 173px;
+  background-size: auto calc(var(--width) * 1.15333);
   position: relative;
   float:left;
-  margin:25px 5px;
+  margin:calc(var(--width) * 0.16666) calc(var(--width) * 0.0333);
   text-align:center;
   zoom:1;
 }
 
   .hex.hex-gap {
-    margin-left: 86px;
+    margin-left: calc(var(--width) * 0.57);
   }
 
   .hex a {
@@ -55,8 +60,8 @@
 
   .hex .corner-1:before,
   .hex .corner-2:before {
-    width: 173px;
-    height:  173px;
+    width: calc(var(--width) * 1.15333);
+    height:  calc(var(--width) * 1.15333);
     content: '';
     position: absolute;
     background: inherit;
@@ -70,12 +75,12 @@
 
 
   .hex .corner-1:before {
-    transform: rotate(-60deg) translate(-87px, 0px);
+    transform: rotate(-60deg) translate(calc(var(--width) * -0.57), 0px);
     transform-origin: 0 0;
   }
 
   .hex .corner-2:before {
-    transform: rotate(60deg) translate(-48px, -11px);
+    transform: rotate(60deg) translate(calc(var(--width) * -0.285), calc(var(--width) * -0.073333));
     bottom:0;
   }
 

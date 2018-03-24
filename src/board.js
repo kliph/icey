@@ -1,4 +1,6 @@
-export const boardSize = [50, 50]
+// Renders well between ≈[6, whatever] to ≈[22, whatever]
+export const boardSize = [22, 2]
+
 export const splitCoord = (coordString) => coordString.split(',').map(x => parseInt(x, 10))
 
 export const generateBoardCoordinates = () => {
@@ -43,13 +45,16 @@ const renderHex = (state, coord) => {
   )
 }
 
-export const renderBoard = (state) => {
+export const renderBoard = (state, boardSize) => {
   const boardHtml = boardCoordinates.reduce((acc, coord) => {
     acc += renderHex(state, coord)
     return acc
   }, '')
 
-  document.getElementById('board').innerHTML = boardHtml
+  const boardElement = document.getElementById('board')
+  boardElement.style.setProperty('--col-count', boardSize[0]);
+  boardElement.style.setProperty('--row-count', boardSize[1]);
+  boardElement.innerHTML = boardHtml
 }
 
 
