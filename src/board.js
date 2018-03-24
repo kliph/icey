@@ -1,5 +1,5 @@
 // Renders well between ≈[6, whatever] to ≈[22, whatever]
-export const boardSize = [22, 2]
+export const boardSize = [10, 10]
 
 export const splitCoord = (coordString) => coordString.split(',').map(x => parseInt(x, 10))
 
