@@ -1,6 +1,6 @@
 import Simplex from 'perlin-simplex'
 
-import { renderBoard, splitCoord, boardCoordinates } from './board'
+import { renderBoard, splitCoord, boardCoordinates, boardSize } from './board'
 
 import './board.scss'
 
@@ -26,4 +26,4 @@ const updateBoard = () => {
 }
 
 
-renderBoard(boardState)
+renderBoard(boardState, boardSize)
