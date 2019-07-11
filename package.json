@@ -9,8 +9,10 @@
     "start": "parcel index.html --open"
   },
   "dependencies": {
-    "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
     "perlin-simplex": "^0.0.3"
+  },
+  "devDependencies": {
+    "sass": "^1.22.3"
   }
 }
